@@ -10,16 +10,3 @@ const waktu = setInterval(function() {
         message.innerText = "Halo! Maaf saya telat muncul.";
     }
 }, 1000);
-
-const display = document.getElementById('display');
-
-const jam = setInterval(function() {
-    detik++;
-    let time = new Date().toLocaleTimeString();
-    display.innerText = time;
-}, 1000);
-
-let counter = 0;
-let intervalId;
-
-const 

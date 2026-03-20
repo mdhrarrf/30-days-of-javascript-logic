@@ -15,9 +15,16 @@ tombolTema.addEventListener('click', function () {
     document.body.classList.toggle('dark-mode');
 });
 
-// --- 4. FITUR SOAL 3 (COUNTER) ---
+// --- 4. FITUR SOAL 3 & 4 (COUNTER DENGAN TARGET) ---
 let angka = 0;
 buttonTambah.addEventListener('click', function () {
     angka++;
     counter.innerText = angka;
+
+    // --- LOGIKA SOAL 4 (PERBAIKAN TARGET KE 10) ---
+    if (angka === 10) {
+        alert("Target 10 tercapai!");
+        counter.style.color = "red";
+        counter.style.fontWeight = "bold"; // Tambahan biar makin keren
+    }
 });
