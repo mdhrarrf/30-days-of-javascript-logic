@@ -36,6 +36,7 @@ tombolBerhenti.addEventListener('click', function() {
 
 tombolReset.addEventListener('click', function() {
     clearInterval(intervalId);
+    counter = 0;
     stopwatchDisplay.innerText = 0;
 });
 
