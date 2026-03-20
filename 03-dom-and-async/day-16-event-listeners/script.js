@@ -16,3 +16,14 @@ const tombolTema = document.getElementById('btn-ubah-warna');
 tombolTema.addEventListener('click', function() {
     document.body.classList.toggle('dark-mode');
 })
+
+// --- SOAL 3:  ---
+const buttonTambah = document.getElementById('btn-tambah');
+const counter = document.getElementById('counter');
+
+let angka = 0;
+buttonTambah.addEventListener('click', function() {
+    counter.innerText = `${angka++}`;
+});
+
+// --- SOAL 4:  ---
