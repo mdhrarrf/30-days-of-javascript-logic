@@ -18,3 +18,8 @@ const jam = setInterval(function() {
     let time = new Date().toLocaleTimeString();
     display.innerText = time;
 }, 1000);
+
+let counter = 0;
+let intervalId;
+
+const 
