@@ -23,7 +23,12 @@ const counter = document.getElementById('counter');
 
 let angka = 0;
 buttonTambah.addEventListener('click', function() {
-    counter.innerText = `${angka++}`;
-});
+    angka++; // Tambah dulu
+    counter.innerText = angka; // Baru tampilkan
 
-// --- SOAL 4:  ---
+    // --- SOAL 4:  ---
+    if (angka === 11 ) {
+        alert("Target tercapai!");
+        counter.style.color = "red";
+    }
+});
