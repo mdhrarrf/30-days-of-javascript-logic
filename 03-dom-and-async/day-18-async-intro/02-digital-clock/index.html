@@ -1,10 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 18 - Async Dashboard v1.0</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
+        .section { border: 1px solid #ddd; padding: 15px; margin-bottom: 20px; border-radius: 8px; }
+        .clock { font-size: 1.5rem; font-weight: bold; color: royalblue; }
+        .stopwatch { font-size: 2rem; color: #333; }
+        button { padding: 8px 15px; cursor: pointer; margin-right: 5px; }
+        button:disabled { cursor: not-allowed; opacity: 0.5; }
+        #data-container { margin-top: 10px; font-style: italic; color: green; }
+    </style>
+</head>
 <body>
-    <h1 id="display">Waktu: 0</h1>
-    <button id="btn-start">Mulai Hitung</button>
-    <button id="btn-stop">Berhenti</button>
-    <p id="message"></p>
+
+    <h1>Time & Async Dashboard</h1>
+
+    <!-- SOAL 1: DELAY MESSAGE -->
+    <div class="section">
+        <h3>1. Status Sistem</h3>
+        <p id="message">Menunggu sistem siap...</p>
+    </div>
+
+    <!-- SOAL 2: DIGITAL CLOCK -->
+    <div class="section">
+        <h3>2. Jam Digital (Real-time)</h3>
+        <div id="clock-display" class="clock">00:00:00</div>
+    </div>
+
+    <!-- SOAL 3: STOPWATCH -->
+    <div class="section">
+        <h3>3. Stopwatch Controller</h3>
+        <div id="stopwatch-display" class="stopwatch">0</div>
+        <br>
+        <button id="btn-start">Mulai</button>
+        <button id="btn-stop">Berhenti</button>
+        <button id="btn-reset">Reset</button>
+    </div>
+
+    <!-- SOAL 4: LOADING SIMULATION -->
+    <div class="section">
+        <h3>4. Data Loader (Simulasi API)</h3>
+        <button id="btn-load">Ambil Data dari Server</button>
+        <div id="data-container"></div>
+    </div>
 
     <script src="script.js"></script>
 </body>

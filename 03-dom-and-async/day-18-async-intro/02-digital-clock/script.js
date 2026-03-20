@@ -1,20 +1,13 @@
+// --- FITUR SOAL 1 (DELAY) ---
 const message = document.getElementById('message');
+setTimeout(function () {
+    message.innerText = "Halo! Maaf saya telat muncul.";
+}, 3000);
 
-let detik = 0;
-const waktu = setInterval(function() {
-    detik++;
-    message.innerText = `Detik ke-${detik}`;
-
-    if (detik === 3) {
-        clearInterval(waktu);
-        message.innerText = "Halo! Maaf saya telat muncul.";
-    }
-}, 1000);
-
+// --- FITUR BARU SOAL 2 (JAM DIGITAL) ---
 const display = document.getElementById('display');
 
-const jam = setInterval(function() {
-    detik++;
+setInterval(function () {
     let time = new Date().toLocaleTimeString();
-    display.innerText = time;
-}, 1000);
+    display.innerText = `Jam Sekarang: ${time}`;
+}, 1000); // Berulang tiap 1 detik

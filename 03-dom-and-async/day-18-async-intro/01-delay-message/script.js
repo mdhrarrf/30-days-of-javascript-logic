@@ -1,12 +1,6 @@
 const message = document.getElementById('message');
 
-let detik = 0;
-const waktu = setInterval(function() {
-    detik++;
-    message.innerText = `Detik ke-${detik}`;
-
-    if (detik === 3) {
-        clearInterval(waktu);
-        message.innerText = "Halo! Maaf saya telat muncul.";
-    }
-}, 1000);
+// Gunakan setTimeout karena tugasnya cuma SEKALI (delay)
+setTimeout(function () {
+    message.innerText = "Halo! Maaf saya telat muncul.";
+}, 3000); // Tunggu 3 detik, lalu jalankan.
