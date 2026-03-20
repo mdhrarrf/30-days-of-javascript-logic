@@ -14,3 +14,15 @@ kotak.style.width = "200px";
 const deskripsi = document.querySelector('.description');
 
 deskripsi.innerHTML = "Teks ini <u>sudah diganti</u> lewat JavaScript!";
+
+// --- SOAL 4: Manipulasi Data Objek (Challenge!) ---
+const user = {
+    nama: "Haidar",
+    status: "Pro"
+};
+
+judul.innerHTML = `Selamat Datang ${user.nama}`;
+
+if (user.status === "Pro") {
+    judul.style.color = "green";
+}
